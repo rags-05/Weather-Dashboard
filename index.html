@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="search-section">
+            <div class="search-wrapper">
+                <input type="text" placeholder="Search for location" class="input_field">
+                <button type="submit" class="btn_search">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="unit-toggle">
+                <button class="temp-unit active" data-unit="C">°C</button>
+                <button class="temp-unit" data-unit="F">°F</button>
+
+            </div>
+        </header>
+
+        <main class="weather-content">
+            <div class="current-weather">
+                <div class="location-info">
+                    <h1 class="city-name">--</h1>
+                    <p class="date-time">
+                        <span class="current-date">--</span>
+                        <span class="current-time">--</span>
+                    </p>
+                </div>
+
+                <div class="weather-main">
+                    <div class="temp-display">
+                        <h2 class="temperature">--°</h2>
+                        <p class="feels-like">Feels like --°</p>
+                    </div>
+                    <div class="weather-icon">
+                        <img src="" alt="weather icon" class="weather-img">
+                        <p class="weather-desc">--</p>
+                    </div>
+                </div>
+
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <span class="label">Humidity</span>
+                        <span class="value humidity">--%</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Wind Speed</span>
+                        <span class="value wind-speed">-- km/h</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Pressure</span>
+                        <span class="value pressure">-- mb</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Visibility</span>
+                        <span class="value visibility">-- km</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="forecast-section">
+                <h3>5-Day Forecast</h3>
+                <div class="forecast-container"></div>
+            </div>
+
+            <div class="charts-section">
+                <div class="hourly-chart">
+                    <canvas id="tempChart"></canvas>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
